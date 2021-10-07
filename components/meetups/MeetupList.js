@@ -11,7 +11,7 @@ export default function MeetupList(props) {
     return (
         <div>
             <ul className={style.list}>
-                {props.meetup.map((meetup) => (
+                {props.meetups.map((meetup) => (
                     <li className={style.item}>
                         <Card>
                             <div className={style.image}>
