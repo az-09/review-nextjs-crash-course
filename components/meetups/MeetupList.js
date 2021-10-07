@@ -5,14 +5,15 @@ import { useRouter } from 'next/router'
 
 export default function MeetupList(props) {
     const router = useRouter();
-    function showDetailHandler() {
-        router.push('/' + props.id)
+    function showDetailHandler(id) {
+        router.push('/' + id)
     }
+
     return (
         <div>
             <ul className={style.list}>
                 {props.meetups.map((meetup) => (
-                    <li className={style.item}>
+                    <li className={style.item} key={meetup.id}>
                         <Card>
                             <div className={style.image}>
                                 <img src={meetup.image} alt={meetup.title}/>
@@ -22,7 +23,7 @@ export default function MeetupList(props) {
                                 <address>{meetup.address}</address>
                             </div>
                             <div className={style.actions}>
-                                <button onClick={showDetailHandler}>Show Details</button>
+                                <button onClick={() => showDetailHandler(meetup.id)}>Show Details</button>
                             </div>
                         </Card>
                     </li>
