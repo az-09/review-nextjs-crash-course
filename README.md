@@ -1,18 +1,18 @@
 ### Steps
 
 > install
-
 - npx create-next-app .
 - npm run dev
-> components
 
->> layout
+> layout
 - Navigation.js
 - Navigation.module.css
 - Navigation.js
->> ui
+
+> ui
 - Card.js
->> meetups
+
+> meetups
 - MeetupList.js
 - MeetupDetail.js
 - NewMeetupForm.js
@@ -31,9 +31,16 @@
         `}</style>
     </div>
     ```
+> mongodb
+- mongodb.js
+
+> api 
+- meetups.js
+
 
 
 ### References
 
 - https://www.youtube.com/watch?v=MFuwkrseXVE
 - https://github.com/vercel/next.js/blob/canary/examples/with-styled-jsx/pages/index.js
+- https://www.section.io/engineering-education/build-nextjs-with-mongodb-and-deploy-on-vercel/
