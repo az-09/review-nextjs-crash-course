@@ -5,12 +5,12 @@ export default async (req, res) => {
 
     const meetups = await db.collection('meetups')
 
-    if(req.method === 'POST'){
+    if(req.method == 'POST'){
         const data = req.body
-        
+        console.log(data)
         const result = await meetups.insertOne(data)
-
-        res.status(201).join({message: 'Meeup inserted'})
+        console.log("test")
+        res.status(201).json({message: 'Meeup inserted'})
 
     }
 }

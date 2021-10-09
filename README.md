@@ -42,7 +42,14 @@
 - index.js
 
 > page/_app
-- 
+- _app.js for layout
+
+> page/meetupId
+- meetupId.js 
+    getStaticProps(context) to get id from params
+    getStaticPaths() for auto generated paths
+
+
 
 
 
