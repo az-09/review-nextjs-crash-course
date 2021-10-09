@@ -49,10 +49,8 @@
     getStaticProps(context) to get id from params
     getStaticPaths() for auto generated paths
 
-
-
-
-
+> page/new-meetup
+- new-meetup.js
 
 ### References
 

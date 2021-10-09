@@ -4,28 +4,24 @@ import Head from 'next/head'
 
 export default function NewMeetupPage() {
     async function addMeetupHandler(enteredMeetupData) {
-       const response = await fetch('/api/new-meetup', {
-           method: 'POST',
-           body: JSON.stringify(enteredMeetupData),
-           headers: {
-               'Content-Type': 'application/json'
-           }
-       })
+        const response = await fetch('/api/new-meetup', {
+            method: 'POST',
+            body: JSON.stringify(enteredMeetupData),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
 
-       const data = await response.json()
-
-       console.log(data)
+        const data = await response.json()
     }
 
     return (
         <Fragment>
             <Head>
-            <title>Add a new meetup</title>
-                <meta name="description" content="Add a new meetup"/>
-
-
+                <title>Add a new meetup</title>
+                <meta name="description" content="Add a new meetup" />
             </Head>
             <NewMeetupForm onAddMeetup={addMeetupHandler} />
         </Fragment>
-    ) 
+    )
 }
